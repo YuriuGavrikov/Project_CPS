@@ -1,0 +1,100 @@
+.feedbackMenu {
+  display: none;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 20px;
+
+  position: absolute;
+  top: 0;
+  right: 0px;
+
+  width: 320px;
+  height: 100%;
+  padding: 15px 16px;
+
+  background: $second-bg-color;
+
+  box-shadow: -30px 0px 30px 10px rgba(34, 60, 80, 0.2);
+
+  transition: left 0.6s;
+
+  z-index: 20;
+}
+
+.feedbackMenu-open {
+  display: flex;
+}
+.feedbackMenu__btn_close {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+.feedbackMenu__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+
+  padding-top: 20px;
+
+  position: relative;
+}
+.feedbackMenu__title::before {
+  content: "";
+  display: inline-block;
+
+  position: absolute;
+  top: 15px;
+  left: -16px;
+
+  width: 4px;
+  height: 40px;
+
+  background: $design-element-color;
+
+  border-radius: 0 10px 10px 0;
+}
+.feedbackMenu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  width: 100%;
+}
+.feedbackMenu__item {
+  padding: 12px 16px;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+}
+
+.feedbackMenu-blur {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  backdrop-filter: blur(15px);
+
+  z-index: 10;
+}
+
+.approval span {
+  color: $button-color;
+}
+
+@media (min-width: 768px) {
+  .feedbackMenu {
+    width: 440px;
+  }
+}
+@media (min-width: 1440px) {
+  .feedbackMenu__btn_close {
+    position: absolute;
+    left: -70px;
+  }
+}

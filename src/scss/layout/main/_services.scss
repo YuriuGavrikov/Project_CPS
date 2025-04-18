@@ -1,0 +1,157 @@
+.services {
+  background: $main-bg-color;
+}
+.services__header {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+.services__title {
+  position: relative;
+
+  padding: 24px 16px;
+  font-weight: 700;
+  font-size: 28px;
+}
+.services__title::before {
+  content: "";
+  display: inline-block;
+
+  position: absolute;
+  top: 25%;
+  left: 0;
+
+  width: 4px;
+  height: 40px;
+
+  background: $design-element-color;
+
+  border-radius: 0 10px 10px 0;
+}
+.services__btns {
+  display: none;
+  align-items: center;
+  gap: 32px;
+}
+.services__hello {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 16px;
+}
+.hello__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.hello__text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+
+  transition: 0.6s;
+}
+.hello__text_open {
+  -webkit-line-clamp: none;
+}
+.hello__img {
+  height: 176px;
+}
+.hello__img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .services__title {
+    padding: 24px;
+  }
+  .services__hello {
+    flex-direction: row;
+    gap: 48px;
+    padding: 24px;
+  }
+  .services__hello div {
+    flex-basis: 50%;
+  }
+  .hello__text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+
+    line-height: 20px;
+  }
+  .hello__text_open {
+    -webkit-line-clamp: none;
+  }
+  .hello__img {
+    height: 208px;
+  }
+  .slideMenu {
+    padding-left: 24px !important;
+  }
+}
+@media (min-width: 1440px) {
+  .services {
+    padding-top: 10px;
+  }
+  .services__btns {
+    display: flex;
+  }
+  .hello__img {
+    height: 308px;
+  }
+  .slideMenu::after {
+    display: none;
+  }
+}
+
+/* -----------------slider--------------------- */
+
+.swiper {
+}
+.slideMenu {
+  padding-left: 16px !important;
+}
+.slideMenu::after {
+  content: "";
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  width: 45px;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  height: 45px;
+  z-index: 10;
+}
+.swiper-wrapper {
+}
+
+.slideMenu__item {
+  padding: 8px 16px;
+
+  width: fit-content !important;
+
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.slideMenu__item-active {
+  border: 2px solid #b8ffec;
+  border-radius: 6px;
+  background: $second-bg-color;
+}

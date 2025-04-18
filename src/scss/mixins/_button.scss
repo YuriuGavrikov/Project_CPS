@@ -1,0 +1,84 @@
+@import "../vars";
+
+@mixin button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  background: transparent;
+  border: none;
+
+  transition: 0.2s;
+
+  cursor: pointer;
+}
+.button__layout {
+  @include button;
+
+  width: 40px;
+  height: 40px;
+  & img:hover {
+    transform: scale(1.1);
+  }
+}
+
+.button__services {
+  @include button;
+
+  & img:hover {
+    transform: scale(1.1);
+  }
+}
+
+.button__showMore {
+  @include button;
+  display: none;
+}
+.button__showMore_text {
+  @include button;
+}
+
+@media (min-width: 768px) {
+  .button__showMore {
+    display: flex;
+    padding: 24px;
+  }
+}
+@media (min-width: 1440px) {
+  .button__showMore {
+    padding: 32px;
+  }
+}
+.button__price {
+  @include button;
+
+  padding: 5px 15px;
+
+  background: $button-color;
+  color: $second-bg-color;
+
+  padding: 5px 15px;
+
+  border-radius: 30px;
+
+  transition: 0.2s;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: -0.15px;
+  text-align: right;
+  text-transform: uppercase;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.price__footnote__btn {
+  @include button;
+}
+
+.rotate {
+  transform: rotate(-180deg);
+}

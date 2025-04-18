@@ -1,0 +1,144 @@
+.burgerMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 20px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -110%;
+
+  width: 320px;
+  height: 100%;
+  padding: 15px 16px;
+
+  background: $second-bg-color;
+  box-shadow: 10px 0px 25px 15px rgba(34, 60, 80, 0.2);
+
+  transition: left 0.6s;
+
+  z-index: 20;
+}
+
+.burgerMenu-blur {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  backdrop-filter: blur(5px);
+
+  z-index: 10;
+}
+
+.burgerMenu-open {
+  left: 0;
+}
+
+.burgerMenu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.burger-close {
+  width: 40px;
+  height: 40px;
+}
+.icon {
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.burgerMenu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.burgerMenu__item {
+  position: relative;
+
+  list-style-type: none;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .burgerMenu__item:hover {
+    transform: scale(1.02);
+  }
+}
+
+.burgerMenu__item-active {
+  color: $active-atem-color;
+}
+.burgerMenu__item-active::before {
+  content: "";
+  display: inline-block;
+
+  position: absolute;
+  top: -17%;
+  left: -16px;
+
+  width: 4px;
+  height: 32px;
+
+  background: $design-element-color;
+
+  border-radius: 0 10px 10px 0;
+}
+.contactsIcons {
+  display: flex;
+  gap: 16px;
+}
+.contacts__btn {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+.header__icon {
+}
+.burgerMenu__email {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+.burgerMenu__tel {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+}
+.burgerMenu__tel__link {
+  text-decoration: none;
+  color: #1b1c21;
+}
+.burgerMenu__lang {
+}
+
+@media (min-width: 320px) {
+}
+@media (min-width: 1440px) {
+  .burger-close {
+    display: none;
+  }
+  .burgerMenu {
+    position: sticky;
+    top: 0px;
+    height: 100vh;
+
+    box-shadow: none;
+  }
+}

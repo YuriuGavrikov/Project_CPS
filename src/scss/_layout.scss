@@ -1,0 +1,110 @@
+@import "./layout/footer";
+@import "./layout/header";
+@import "./layout/main";
+@import "./layout/burgerMenu";
+@import "./layout/feedbackMenu";
+@import "./layout/orderCall";
+
+body {
+  font-family: TT Lakes;
+  font-size: 16px;
+  color: $main-text-color;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+.wrapper-hidden {
+  overflow: hidden;
+}
+.container {
+  position: relative;
+  height: 100%;
+}
+.container__inner {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+// ----------------------------------------------------------------
+
+.section__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  padding: 16px;
+
+  background: rgb(248, 248, 248);
+  background: linear-gradient(
+    90deg,
+    rgba(248, 248, 248, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+.section__list {
+  display: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  height: 170px;
+  overflow: hidden;
+
+  padding: 16px;
+
+  transition: 0.2s;
+}
+
+.section__list_open {
+  height: auto;
+}
+
+.slideCards {
+  padding: 35px 16px !important;
+}
+.slideCards__pagination {
+  bottom: 5px !important;
+}
+
+.swiper-pagination-bullet {
+  background: #6d6d6d !important;
+
+  width: 12px !important;
+  height: 12px !important;
+}
+.swiper-pagination-bullet-active {
+  background: #b5b6bc !important;
+}
+
+@media (min-width: 768px) {
+  .slideCards {
+    display: none !important;
+  }
+  .section__title {
+    padding-left: 24px;
+  }
+  .section__list {
+    display: flex;
+  }
+  .section__btn {
+    display: flex;
+  }
+}
+@media (min-width: 1440px) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    display: flex;
+    width: 1440px;
+  }
+  .section__title {
+    padding-left: 32px;
+  }
+}

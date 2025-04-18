@@ -1,0 +1,14 @@
+@import "mixins";
+@import "fonts";
+@import "vars";
+@import "vendor";
+@import "layout";
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red; */
+}

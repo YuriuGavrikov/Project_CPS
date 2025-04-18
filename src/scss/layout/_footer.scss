@@ -1,0 +1,38 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  padding: 16px;
+
+  background: $main-bg-color;
+}
+.footer__item {
+  color: $active-atem-color;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    padding: 24px;
+    gap: 50px;
+  }
+  .footer__item:last-child {
+    text-align: right;
+  }
+  .footer__item:first-child {
+    text-align: left;
+  }
+}
+@media (min-width: 1440px) {
+  .footer {
+    padding: 32px;
+    gap: 70px;
+  }
+}

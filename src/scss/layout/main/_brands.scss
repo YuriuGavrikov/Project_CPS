@@ -1,0 +1,36 @@
+.brands {
+  background: $main-bg-color;
+}
+
+.brands__item {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 240px !important;
+  height: 72px !important;
+
+  padding: 20px;
+
+  border: 1px solid #eaeaea;
+  background: $second-bg-color;
+}
+.brands__item__logo {
+}
+.brands__item__logo__img {
+}
+.brands__item__btn {
+}
+
+@media (min-width: 320px) {
+}
+@media (min-width: 768px) {
+  .brands__item {
+    width: 224px !important;
+  }
+}
+@media (min-width: 1440px) {
+  .brands__item {
+    width: 240px !important;
+  }
+}

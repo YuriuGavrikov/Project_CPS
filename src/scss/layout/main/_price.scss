@@ -1,0 +1,169 @@
+.price {
+  background: $main-bg-color;
+}
+
+.price__item {
+  display: flex !important;
+  flex-direction: column;
+  gap: 16px;
+
+  width: 260px !important;
+  height: 200px !important;
+
+  padding: 20px;
+
+  border: 1px solid #eaeaea;
+  background: $second-bg-color;
+}
+.price__item__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.price__item__title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0px;
+
+  color: $active-atem-color;
+}
+.price__item__content {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+
+  color: $main-text-color;
+}
+.price__item__btn {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+}
+
+.price__table {
+  padding: 32px;
+  display: none;
+}
+
+.services-table {
+  width: 100%;
+  margin: 0 auto;
+  background: white;
+  overflow: hidden;
+}
+.service-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #e0e0e0;
+
+  padding: 24px 0;
+}
+.service-row:last-child {
+  border-bottom: none;
+}
+.service-name {
+  flex: 3.5;
+}
+.service-price {
+  flex: 1;
+  text-align: left;
+}
+.service-time {
+  flex: 1;
+  text-align: left;
+}
+.service-order {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+}
+
+.services-table-header {
+  padding: 0 20px;
+
+  background-color: $main-bg-color;
+
+  color: #7e7e82;
+}
+.services-table-body {
+  padding: 0 20px;
+}
+
+.price__footnote {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  padding: 16px;
+
+  max-width: 470px;
+}
+.price__footnote__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+.price__footnote__btn {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+.price__footnote__btn span {
+  color: $button-color;
+}
+
+@media (min-width: 768px) {
+  .price__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+
+    width: 100% !important;
+    height: 200px;
+
+    padding: 20px;
+
+    border: 1px solid #eaeaea;
+    background: $second-bg-color;
+  }
+  .price__item__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .price__item__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0px;
+
+    color: $active-atem-color;
+  }
+  .price__item__content {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+  }
+  .price__item__btn {
+    position: static;
+  }
+  .price__table {
+    display: block;
+  }
+  .price__footnote {
+    padding: 0 24px 24px 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .price__footnote {
+    padding: 0 32px 32px 32px;
+  }
+}
